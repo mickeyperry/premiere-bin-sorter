@@ -35,11 +35,21 @@ Automatically organize your Premiere Pro project bins by media type with one cli
 
 ### Mac
 
-1. Download or clone this repository
-2. Double-click **`Install-Mac.command`**
-   - If blocked: Right-click → Open → Open
+**Option 1 - Terminal (Recommended):**
+1. Download and unzip this repository
+2. Open **Terminal** and run:
+   ```bash
+   chmod +x ~/Downloads/premiere-bin-sorter-master/Install-Mac.command
+   ~/Downloads/premiere-bin-sorter-master/Install-Mac.command
+   ```
 3. Restart Premiere Pro
 4. Go to **Window → Extensions → Bin Sorter**
+
+**Option 2 - Manual Copy:**
+1. Open Finder, press `Cmd+Shift+G` and go to: `~/Library/Application Support/Adobe/CEP/extensions/`
+2. Copy the `com.premiere.binsorter` folder there
+3. Open Terminal and run: `defaults write com.adobe.CSXS.11 PlayerDebugMode 1`
+4. Restart Premiere Pro
 
 ### Manual Install
 
