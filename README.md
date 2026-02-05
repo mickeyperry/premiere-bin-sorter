@@ -2,7 +2,7 @@
 
 Automatically organize your Premiere Pro project bins by media type with one click. Includes full **UNDO** functionality to restore your original structure.
 
-![Premiere Pro](https://img.shields.io/badge/Premiere%20Pro-2020--2024-9999FF?logo=adobe-premiere-pro)
+![Premiere Pro](https://img.shields.io/badge/Premiere%20Pro-2020--2026-9999FF?logo=adobe-premiere-pro)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue)
 
 ## Features
