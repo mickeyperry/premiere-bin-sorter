@@ -3,7 +3,7 @@
 Automatically organize your Premiere Pro project bins by media type with one click. Includes full **UNDO** functionality to restore your original structure.
 
 ![Premiere Pro](https://img.shields.io/badge/Premiere%20Pro-2020--2026-9999FF?logo=adobe-premiere-pro)
-![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac-blue)
 
 ## Features
 
@@ -26,24 +26,40 @@ Automatically organize your Premiere Pro project bins by media type with one cli
 
 ## Installation
 
-### Quick Install (Windows)
+### Windows
 
 1. Download or clone this repository
 2. Double-click **`Install.bat`**
 3. Restart Premiere Pro
 4. Go to **Window → Extensions → Bin Sorter**
 
+### Mac
+
+1. Download or clone this repository
+2. Double-click **`Install-Mac.command`**
+   - If blocked: Right-click → Open → Open
+3. Restart Premiere Pro
+4. Go to **Window → Extensions → Bin Sorter**
+
 ### Manual Install
 
 Copy the `com.premiere.binsorter` folder to:
+
+**Windows:**
 ```
 %APPDATA%\Adobe\CEP\extensions\
 ```
 
-Then enable unsigned extensions by running `enable_debug.bat` or adding this registry key:
+**Mac:**
 ```
-HKEY_CURRENT_USER\Software\Adobe\CSXS.11\PlayerDebugMode = "1"
+~/Library/Application Support/Adobe/CEP/extensions/
 ```
+
+Then enable unsigned extensions:
+
+**Windows:** Run `enable_debug.bat` or add registry key `HKEY_CURRENT_USER\Software\Adobe\CSXS.11\PlayerDebugMode = "1"`
+
+**Mac:** Run in Terminal: `defaults write com.adobe.CSXS.11 PlayerDebugMode 1`
 
 ## Usage
 
@@ -57,9 +73,9 @@ HKEY_CURRENT_USER\Software\Adobe\CSXS.11\PlayerDebugMode = "1"
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Enter` or `F5` | Run Sort |
-| `Ctrl+Z` | Undo Sort |
-| `Ctrl+S` | Save Settings |
+| `Ctrl/Cmd+Enter` or `F5` | Run Sort |
+| `Ctrl/Cmd+Z` | Undo Sort |
+| `Ctrl/Cmd+S` | Save Settings |
 
 ## Settings
 
