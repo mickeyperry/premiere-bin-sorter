@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Sorter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <div class="title">BIN SORTER</div>
+        </div>
+        <div class="header-right">
+            <button class="save-btn" id="saveBtn" title="Save Settings (Ctrl+S)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                    <polyline points="17 21 17 13 7 13 7 21"/>
+                    <polyline points="7 3 7 8 15 8"/>
+                </svg>
+            </button>
+            <button class="undo-btn" id="undoBtn" title="Undo Sort (Ctrl+Z)" disabled>UNDO</button>
+            <button class="run-btn" id="runSortBtn" title="Ctrl+Enter or F5">SORT</button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Categories -->
+        <div class="category-row">
+            <span class="category-label">Sequences</span>
+            <input type="text" class="category-input" id="sequencesFolder" value="Comps" placeholder="Folder name...">
+        </div>
+
+        <div class="category-row">
+            <span class="category-label">Audio</span>
+            <input type="text" class="category-input" id="audioFolder" value="Sound" placeholder="Folder name...">
+        </div>
+
+        <div class="category-row">
+            <span class="category-label">Video</span>
+            <input type="text" class="category-input" id="videoFolder" value="Footage" placeholder="Folder name...">
+        </div>
+
+        <div class="category-row">
+            <span class="category-label">Images</span>
+            <input type="text" class="category-input" id="imagesFolder" value="GFX" placeholder="Folder name...">
+        </div>
+
+        <div class="category-row">
+            <span class="category-label">AI & PSD</span>
+            <input type="text" class="category-input" id="psdFolder" value="GFX" placeholder="Folder name...">
+        </div>
+
+        <div class="category-row">
+            <span class="category-label">Motion GFX</span>
+            <input type="text" class="category-input" id="mogrtFolder" value="Motion Graphics" placeholder="Folder name...">
+        </div>
+
+        <div class="category-row">
+            <span class="category-label">Missing</span>
+            <input type="text" class="category-input" id="missingFolder" value="Missing Content" placeholder="Folder name...">
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Options -->
+        <div class="toggle-row">
+            <span class="toggle-label">Remove empty bins</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="removeEmptyBins" checked>
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="toggle-row">
+            <span class="toggle-label">Remove unused items</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="removeUnused">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Ignored folders -->
+        <div class="ignored-row">
+            <span class="ignored-label">Ignored bins</span>
+            <input type="text" class="ignored-input" id="ignoredBins" value="__Master__" placeholder="Comma separated...">
+        </div>
+
+        <div class="toggle-row">
+            <span class="toggle-label">Sort only selected bin</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="selectedBinOnly">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar" id="statusBar">Ready</div>
+
+    <!-- Footer Branding -->
+    <div class="footer">
+        <div class="footer-text">Made by <span>MICKEY PERRY</span></div>
+    </div>
+
+    <script src="js/CSInterface.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

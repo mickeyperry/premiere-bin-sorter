@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    background-color: #0d0d14;
+    color: #e0e0e0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header - Compact horizontal layout */
+.header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 0, 200, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 200, 0.5));
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff00c8, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.save-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 6px;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+.save-btn:hover {
+    color: #ff00c8;
+    background: rgba(255, 0, 200, 0.1);
+}
+
+.undo-btn {
+    background: transparent;
+    border: 1px solid #444;
+    color: #666;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: not-allowed;
+    font-size: 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.undo-btn:disabled {
+    opacity: 0.5;
+}
+
+.undo-btn.active {
+    border-color: #ff00c8;
+    color: #ff00c8;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 200, 0.2);
+}
+
+.undo-btn.active:hover {
+    background: rgba(255, 0, 200, 0.1);
+    box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
+}
+
+.run-btn {
+    background: linear-gradient(135deg, #ff00c8 0%, #7b2ff7 100%);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 0, 200, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.run-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 0, 200, 0.5);
+}
+
+.run-btn:active {
+    transform: translateY(0);
+}
+
+.run-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Main content */
+.content {
+    padding: 15px;
+    background: #0d0d14;
+}
+
+/* Category rows */
+.category-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #1a1a2e 0%, #12121f 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.2s;
+}
+
+.category-row:hover {
+    border-color: rgba(255, 0, 200, 0.3);
+}
+
+.category-label {
+    background: linear-gradient(135deg, rgba(255, 0, 200, 0.2) 0%, rgba(123, 47, 247, 0.2) 100%);
+    color: #fff;
+    padding: 10px 12px;
+    min-width: 100px;
+    font-weight: 500;
+    font-size: 11px;
+    border-right: 1px solid rgba(255, 0, 200, 0.2);
+}
+
+.category-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ff6bc8;
+    padding: 10px 12px;
+    font-size: 12px;
+    outline: none;
+}
+
+.category-input:focus {
+    background: rgba(255, 0, 200, 0.05);
+}
+
+.category-input::placeholder {
+    color: #444;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 200, 0.3), transparent);
+    margin: 15px 0;
+}
+
+/* Toggle rows */
+.toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.toggle-label {
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* Toggle switch */
+.toggle-switch {
+    position: relative;
+    width: 42px;
+    height: 22px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1a2e;
+    transition: 0.3s;
+    border-radius: 22px;
+    border: 1px solid #333;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #555;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background: linear-gradient(135deg, #ff00c8 0%, #7b2ff7 100%);
+    border-color: transparent;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+    background-color: white;
+}
+
+/* Ignored section */
+.ignored-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #1a1a2e 0%, #12121f 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ignored-label {
+    background: rgba(255, 255, 255, 0.05);
+    color: #888;
+    padding: 10px 10px;
+    font-weight: 500;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.ignored-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #666;
+    padding: 10px 12px;
+    font-size: 12px;
+    outline: none;
+}
+
+.ignored-input:focus {
+    background: rgba(255, 255, 255, 0.02);
+    color: #aaa;
+}
+
+/* Footer / Branding */
+.footer {
+    padding: 10px 15px;
+    background: #0a0a10;
+    border-top: 1px solid rgba(255, 0, 200, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    font-size: 10px;
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+.footer-text span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Status bar */
+.status-bar {
+    padding: 10px 15px;
+    background: #0d0d14;
+    color: #555;
+    font-size: 11px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status-bar.success {
+    color: #4ade80;
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+}
+
+.status-bar.error {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.status-bar.working {
+    color: #ff00c8;
+    text-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d0d14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff00c8, #7b2ff7);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff40d8, #9b4ff7);
+}
