@@ -1,4 +1,4 @@
-/* Bin Sorter - ExtendScript for Premiere Pro */
+/* Mr. Bin (formerly Bin Sorter) - ExtendScript for Premiere Pro */
 
 var AUDIO_EXT = ',wav,mp3,aiff,aif,aac,m4a,flac,ogg,wma,';
 var VIDEO_EXT = ',mp4,mov,avi,mkv,wmv,flv,webm,mpg,mpeg,m4v,mxf,r3d,braw,ari,';

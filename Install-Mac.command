@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "============================================"
-echo "  BIN SORTER - Mac Installer"
+echo "  MR. BIN - Mac Installer"
 echo "  By Mickey Perry"
 echo "============================================"
 echo ""
@@ -18,7 +18,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Create destination folder
 DEST="$HOME/Library/Application Support/Adobe/CEP/extensions"
-echo "Installing Bin Sorter..."
+echo "Installing Mr. Bin..."
 mkdir -p "$DEST"
 
 # Copy extension
@@ -29,7 +29,7 @@ echo "============================================"
 echo "  Installation complete!"
 echo ""
 echo "  1. Restart Premiere Pro"
-echo "  2. Go to: Window > Extensions > Bin Sorter"
+echo "  2. Go to: Window > Extensions > Mr. Bin"
 echo "============================================"
 echo ""
 read -p "Press Enter to close..."

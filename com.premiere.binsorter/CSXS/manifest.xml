@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExtensionManifest Version="11.0" ExtensionBundleId="com.premiere.binsorter" ExtensionBundleVersion="1.0.0" ExtensionBundleName="Bin Sorter">
+<ExtensionManifest Version="11.0" ExtensionBundleId="com.premiere.binsorter" ExtensionBundleVersion="1.0.0" ExtensionBundleName="Mr. Bin">
     <ExtensionList>
         <Extension Id="com.premiere.binsorter.panel" Version="1.0.0"/>
     </ExtensionList>
@@ -30,7 +30,7 @@
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>Bin Sorter</Menu>
+                    <Menu>Mr. Bin</Menu>
                     <Geometry>
                         <Size>
                             <Height>650</Height>

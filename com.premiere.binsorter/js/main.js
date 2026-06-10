@@ -1,4 +1,4 @@
-/* Bin Sorter - Main Panel JS */
+/* Mr. Bin (formerly Bin Sorter) - Main Panel JS */
 
 var csInterface;
 var settings = {

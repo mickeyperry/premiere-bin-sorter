@@ -1,4 +1,6 @@
-# Bin Sorter - Premiere Pro Extension
+# Mr. Bin - Premiere Pro Extension
+
+*your project panel's personal butler* (formerly **Bin Sorter**)
 
 Automatically organize your Premiere Pro project bins by media type with one click. Includes full **UNDO** functionality to restore your original structure.
 
@@ -31,7 +33,7 @@ Automatically organize your Premiere Pro project bins by media type with one cli
 1. Download or clone this repository
 2. Double-click **`Install.bat`**
 3. Restart Premiere Pro
-4. Go to **Window → Extensions → Bin Sorter**
+4. Go to **Window → Extensions → Mr. Bin**
 
 ### Mac
 
@@ -43,7 +45,7 @@ Automatically organize your Premiere Pro project bins by media type with one cli
    ~/Downloads/premiere-bin-sorter-master/Install-Mac.command
    ```
 3. Restart Premiere Pro
-4. Go to **Window → Extensions → Bin Sorter**
+4. Go to **Window → Extensions → Mr. Bin**
 
 **Option 2 - Manual Copy:**
 1. Open Finder, press `Cmd+Shift+G` and go to: `~/Library/Application Support/Adobe/CEP/extensions/`
@@ -74,7 +76,7 @@ Then enable unsigned extensions:
 ## Usage
 
 1. Open your Premiere Pro project
-2. Open the Bin Sorter panel (Window → Extensions → Bin Sorter)
+2. Open the Mr. Bin panel (Window → Extensions → Mr. Bin)
 3. Configure your folder names (optional)
 4. Click **SORT**
 5. If needed, click **UNDO** to restore original structure

@@ -1,6 +1,6 @@
 @echo off
 echo ============================================
-echo   BIN SORTER - Installer
+echo   MR. BIN - Installer
 echo   By Mickey Perry
 echo ============================================
 echo.
@@ -13,7 +13,7 @@ echo Enabling extension support...
 %SystemRoot%\System32\reg.exe add HKEY_CURRENT_USER\Software\Adobe\CSXS.12 /v PlayerDebugMode /t REG_SZ /d 1 /f >nul 2>&1
 
 :: Create destination folder
-echo Installing Bin Sorter...
+echo Installing Mr. Bin...
 if not exist "%APPDATA%\Adobe\CEP\extensions" mkdir "%APPDATA%\Adobe\CEP\extensions"
 
 :: Copy extension using robocopy
@@ -24,7 +24,7 @@ echo ============================================
 echo   Installation complete!
 echo.
 echo   1. Restart Premiere Pro
-echo   2. Go to: Window - Extensions - Bin Sorter
+echo   2. Go to: Window - Extensions - Mr. Bin
 echo ============================================
 echo.
 pause
